@@ -62,7 +62,9 @@
     .card{background:var(--card); border:1px solid rgba(148,163,184,.18); border-radius:18px; padding:18px}
 
     .badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
-    .badge{padding:6px 10px; border-radius:999px; background:rgba(148,163,184,.12); border:1px solid rgba(148,163,184,.2); font-size:12px}
+    .badge{padding:6px 10px; border-radius:999px; background:rgba(148,163,184,.12); border:1px solid rgba(148,163,184,.2); font-size:12px; text-decoration:none; display:inline-block}
+    .badge.link{border-color:rgba(56,189,248,.4); background:rgba(56,189,248,.15); color:white}
+    .badge.link:hover{background:rgba(56,189,248,.25)}
 
     section{padding:42px 0}
     .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
@@ -295,14 +297,9 @@
           <h3>Zertifizierungen</h3>
           <p>Erfolgreich abgeschlossene Zertifizierungen in HTML/CSS, Python und Projektmanagement mit praktischen Projekten.</p>
           <div class="badges">
-            <span class="badge">HTML/CSS</span>
-            <span class="badge">Python</span>
-            <span class="badge">Projektmanagement</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="Zertifikat%20Html%20Css.pdf" target="_blank" rel="noopener">HTML/CSS ansehen</a>
-            <a class="btn" href="Zertifikat%20Python.pdf" target="_blank" rel="noopener">Python ansehen</a>
-            <a class="btn" href="Zertifikat%20Projekt.pdf" target="_blank" rel="noopener">Projektmanagement ansehen</a>
+            <a class="badge link" href="Zertifikat%20Html%20Css.pdf" target="_blank" rel="noopener">HTML/CSS</a>
+            <a class="badge link" href="Zertifikat%20Python.pdf" target="_blank" rel="noopener">Python</a>
+            <a class="badge link" href="Zertifikat%20Projekt.pdf" target="_blank" rel="noopener">Projektmanagement</a>
           </div>
         </article>
       </div>

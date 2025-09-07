@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="MathMinds">
+    <meta name="description"
+        content="MathMinds hilft Grundschülern Mathe besser zu verstehen. Mit unsere Webseite wirst du spaß an Mathe haben.">
+    <!--ab hier Open Graph für Social Media-->
+    <meta property="og:title" content="MathMinds">
+    <meta property="og:description"
+        content="MathMinds hilft Grundschülern Mathe besser zu verstehen. Mit unsere Webseite wirst du spaß an Mathe haben.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="/img/MathMinds-Logo.svg">
+    <!--Ende von Open Graph-->
+    <link rel="icon" href="/img/favicon/favicon-32x32.ico">
+    <!--32x32-->
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>MathMinds-Startseite</title>
+</head>
+
+<body>
+    <header>
+        <!--Navigation inspieriert vom YouTube Kanal Web Dev Tutorials https://www.youtube.com/watch?v=flItyHiDm7E-->
+        <nav class="navbar" id="navbar">
+            <a href="index.html">
+                <img class="logo" src="img/MathMinds-Symbol.png" alt="MathMinds Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item aktiv">
+                    <a href="index.html" class="nav-link">Startseite</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Klasse1-2.html" class="nav-link"> Klassen 1-2</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Klasse3-4.html" class="nav-link"> Klassen 3-4</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--Slider inspierert von der Webseite: https://dev.to/shantanu_jana/how-to-create-an-image-slider-using-html-css-and-javascript-mo0-->
+    <div class="slider-box">
+        <button id="prev" onclick="prev()">&lt;</button>
+        <div class="slider">
+            <img src="img/slider2.jpg" id="content1" class="img activeSlider"
+                alt=" Eine Gruppe von Kindern die Mathe aufgaben lösen und dabei spass haben im Anime-Style. Im hintergrund ist eine Tafel mit den Worten, Math Minds">
+            <img src="img/slider3.jpg" id="content2" class="img" alt="Eine Gruppe von Kindern die Mathe aufgaben lösen und dabei spass haben im Anime-Style. Im hintergrund ist eine Tafel mit den Worten, Math Minds">
+            <img src="img/slider4.jpg" id="content3" class="img"
+                alt="Eine Gruppe von Kindern die Mathe aufgaben lösen und dabei spass haben im Anime-Style. Im hintergrund ist eine Tafel mit den Worten, Math Minds">
+        </div>
+        <button id="next" onclick="next()">&gt;</button>
+    </div>
+    <div class="dot-container">
+        <button onclick="dot(1)" class="dot"></button>
+        <button onclick="dot(2)" class="dot"></button>
+        <button onclick="dot(3)" class="dot"></button>
+    </div>
+
+    <main>
+        <article class="main-article">
+            <h1>Willkomen bei Math Minds</h1>
+            <section class="mainheader">
+                <h2> Dein Mathe-Abenteuer für die Klassen 1-4!</h2>
+                <p>
+                    Auf Math Minds können Kinder der Klassen 1 bis 4 spielerisch und gezielt ihr Mathe-Wissen
+                    verbessern.
+                </p>
+                <p>
+                    Unsere Plattform bietet interaktive Übungen und kindgerechte Erklärungen, die
+                    das Lernen zu einem echten Vergnügen machen. Egal, ob Grundrechenarten oder Zahlenrätsel
+                    – bei uns findet jedes Kind die passende Herausforderung.
+
+                    Entdecke, lerne und wachse – mit Math Minds!
+                </p>
+            </section>
+            <div class="articlebox">
+                <section class="square">
+                    <h2>Klasse 1-2</h2>
+                    <p>
+                        Erste Rechenarten wie Additionen und Subtraktionen ertwarten dich hier!
+                    </p>
+                    <figure>
+                        <img src="img/Deckblätter/Deckblatt-1bis2.jpeg" alt="Kinder vor einer Tafel mit den Worten, Klasse 1 bis 2">
+                    </figure>
+                    <form action="Klasse1-2.html">
+                        <button>Starten</button>
+                    </form>
+                </section>
+                <section class="square">
+                    <h2>Klasse 3-4</h2>
+                    <p>
+                        Weitere Rechenarten wie das kleine Einmaleins und das Teilen von Zahlen erwarrtet dich hier!
+                    </p>
+                    <figure>
+                        <img src="img/Deckblätter/Deckblatt-3bis4.jpeg" alt="Eine Tafel im Klassenzimmer mit den Worten, 3 bis 4">
+                    </figure>
+                    <form action="Klasse3-4.html">
+                        <button>Starten</button>
+                    </form>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; Enes, Arman, Qusay</p>
+        <a class="footer-link" href="impressum.html">Impressum</a>
+        <a class="footer-link" href="datenschutz.html">Datenschutz</a>
+    </footer>
+    <script src="assets/javascript/slider.js"></script>
+    <script src="assets/javascript/menu.js"></script>
+    <script src="assets/javascript/scrollTop.js"></script>
+</body>
+
+</html>
