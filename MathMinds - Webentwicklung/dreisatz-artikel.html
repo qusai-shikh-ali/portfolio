@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Mathematik, proportionaler Dreisatz, antiproportionaler Dreisatz, Simply Math"
+    />
+    <meta
+      name="description"
+      content="Dreisatz bereitet dir Probleme? In unserem Artikel erklären wir dir, wie du Proportionalem und antiproportionalen Dreisatz ausrechnest."
+    />
+    <!--ab hier Open Graph für Social Media-->
+    <meta property="og:title" content="Simply Math - Dreisatz berechnen" />
+    <meta
+      property="og:description"
+      content="Dreisatz bereitet dir Probleme? In unserem Artikel erklären dir, wie du Proportionalem und antiproportionalen Dreisatz ausrechnest."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:image"
+      content="img/SimplyMath_Mathe_leicht_erklärt.png"
+    />
+    <!--Ende Open Graph-->
+    <link rel="icon" href="img/favicon/favicon-32x32.ico" />
+    <!--32x32-->
+    <link
+      rel="apple-touch-icon"
+      href="img/favicon/apple-touch-icon-180x180.png"
+    />
+    <!--180x180-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <title>Simply Math - Anti- und proportionaler Dreisatz berechnen.</title>
+  </head>
+  <body>
+    <header>
+      <!--Navigation inspieriert vom YouTube Kanal Web Dev Tutorials https://www.youtube.com/watch?v=flItyHiDm7E-->
+      <nav class="navbar" id="navbar">
+        <a href="index.html"
+          ><img class="logo" src="img/simplymath.png" alt="Simply Math logo"
+        /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Startseite</a>
+          </li>
+          <li class="nav-item">
+            <a href="artikeln.html" class="nav-link">Jetzt lernen</a>
+          </li>
+          <li class="nav-item">
+            <a href="nachhilfe-finden.html" class="nav-link">Finde Nachhilfe</a>
+          </li>
+          <li class="nav-item">
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <div class="scrollTopBtn" id="scrollTopBtn">
+      <span class="material-symbols-outlined"> keyboard_double_arrow_up </span>
+    </div>
+    <main class="container-article">
+      <article class="article">
+        <section class="article-header">
+          <h1>Dreisatz rechnen - Proportional und Antiproportional</h1>
+        </section>
+        <section class="article-main">
+          <p>
+            Wir behandeln den Dreisatz in diesem Artikel. Du lernst hier, den
+            proportionalen Dreisatz und den antiproportionalen Dreisatz zu
+            lösen. Der Dreisatz dient dazu mit drei gegebenen Größen eine vierte
+            Größe zu berechen. Der Dreisatz wird in drei Zeilen angegeben.
+          </p>
+          <br />
+          <h2>Proportionaler Dreisatz berechen</h2>
+          <p>
+            Der einfache Dreisatz wird auch als proportionaler Dreisatz
+            bezeichnet. Für proportionalen Dreisatz gilt die Regel:
+            <b>Je mehr, desto mehr</b>. Beispiel: Je mehr Kilometer ich laufen
+            werde, desto mehr Kalorien werde ich verbrennen. Es gibt zwei
+            Möglichkeiten den proportionalen Dreisatz zu lösen. Entweder mit
+            einer Tabelle oder mit einer Formel.
+          </p>
+          <br />
+          <h3>Proportionaler Dreisatz Tabelle:</h3>
+          <p>
+            Als Beispiel dient ein Spaziergang. Für fünf durchgelaufene
+            Kilometer werden 660 kcal verbrannt. Der Läufer hat sich entschieden
+            weitere drei Kilometer zu laufen. Wie viel Kalorien werden nach dem
+            Spaziergang verbrannt? Zur Lösung schreiben wir in die erste Zeile
+            die gegebene Informationene: 5 Kilometer mit 660 Kalorien. In der
+            zweiten Zeile rechnen wir auf ein Kilometer runter, daher teilen wir
+            Kilometer und Kalorienanzahl durch fünf. Im 3. Schritt
+            Multiplizieren wir beide Seiten mal acht(weil wir die verbrannten
+            Kalorien für acht Kilometer wissen möchten).
+          </p>
+          <table>
+            <tr>
+              <th>Kilometer</th>
+              <th>Kalorien</th>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>660</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>132</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>1056</td>
+            </tr>
+          </table>
+          <br />
+          <h3>Proportionales Dreisatz mit Formel</h3>
+          <p class="alert_Y">
+            Der Propotionale Dreisatz kann mit einer einfachen Formel berechnet
+            werden. Das Ergebnis (x) ist dabei die Anfagnsmenge(A<sub>M</sub>)
+            geteilt durch die Anfangsanzahl(A<sub>Z</sub>) multipliziert mit
+            Endzahl(E<sub>Z</sub>). $$x = \frac{A_{M}}{A_{Z}} \times 8$$ Für
+            unser Beispiel ist die Ausgangmenge 660 Kalorien bei einer Anzahl
+            von fünf Kilometer. Die Endanzahl der Kilometer ist acht. Mit dieser
+            Formel zum propertionalen Dreisatz, lässt sich sagen das unsere end
+            Menge X 1056 Kalorien ergibt. $$x = \frac{660kcal}{5} \times 8$$ $$x
+            = 1056kcal$$
+          </p>
+          <h2>Antiproportionaler Dreisatz berechnen</h2>
+          <p>
+            Im Antiproportionalen Dreisatz gilt die Regel: Je mehr, desto
+            weniger. Beispiel: Je mehr Arbeiter an einem Projekt tätig sind,
+            desto schneller ist das Projekt beendet.
+          </p>
+          <h3>Antiproportionale Dreisatz Tabelle</h3>
+          <p>
+            Drei Bauarbeiter brauchen brauchen um einen Raum zu Streichen ca.
+            acht Stunden, bis der Raum fertig ist. Wie viele Stunden brauchen
+            zehn Bauarbeiter, um dem Raum fertig zu machen? Erste Zeile kommen
+            die Ausganginformationen: 3 Bauarbeiter brauchen 8 Stunden.
+            <br />
+            Im nächsten Schritt wird berechnet, wie lange ein Arbeiter für den
+            Raum braucht. In der zweiten Zeile, sieht man deutlich, dass umso
+            mehr Arbeiter da sind, desto weinger Zeit wird benötigt. Daher wird
+            die Anzahl der Mitarbeiter durch drei geteilt jedoch der Zeit wird
+            mal 3 länger. Aus 8 Stunden bei 3 Arbeiter werden 24 Stunden bei 1
+            Bauarbeiter. Für die dritte Zeile der Tabelle, rechenen wir jedoch
+            Arbeitszeit für zehn Mitarbeiter. Wir multiplizieren von 1 auf 10
+            Arbeiter und teilen den Zeit durch 10.
+            <br />
+            <br />
+            Während ein Bauarbeiter 24 Stunden braucht, benötigen 10 Bauarbeiter
+            nur 2,4 Stunden.
+          </p>
+          <table>
+            <tr>
+              <th>Bauarbeiter</th>
+              <th>Stunden</th>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>8h</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>24h</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>2,4h</td>
+            </tr>
+          </table>
+          <h3>Antiproportionale Dreisatz Formel</h3>
+          <p class="alert_a">
+            Antiproportionale Dreisatz kann auch mit einer Formel berechnet
+            werden. Dazu wird Anfangswert(A<sub>W</sub>) mit der Anfangszahl
+            (A<sub>Z</sub>) multipliziert und durch die Endzahl (E<sub>Z</sub>)
+            geteilt. Die Formel berechnet x, spricht das Ergebnis. $$x =
+            \frac{A_W \times A_Z}{E_Z}$$ Für unser Beispiel: Anfangswert = 8
+            Stunden, Anfangszahl = 3 Bauarbeiter. Die Endzahl liegt bei 10
+            Bauarbeiter $$x = \frac{8\times 3 Bauarbeiter}{8 Bauarbeiter}$$ $$x
+            = 3$$ Wir erhalten eine Dauer von 3 Stunden um den Raum fertig zu
+            renovieren.
+          </p>
+        </section>
+        <section class="exercise-box">
+          <h2>Teste dein Wissen</h2>
+          <section class="exercise">
+            <h3>Aufgabe nr1.</h3>
+            <p class="p-exercise">
+              Frau Schmidt hat nach 6 Stunden Arbeit 90 € verdient. Wie viel
+              Euro würde Sie nach 8 Stunden verdienen?
+              <input id="resultq1" />
+              <input
+                type="submit"
+                class="check-result"
+                id="check1"
+                value="Überprüfen"
+              />
+              <span class="result-icon"> &#x2714; </span>
+            </p>
+          </section>
+          <section class="exercise">
+            <h3>Aufgabe nr. 2</h3>
+            <p class="p-exercise">
+              Herr Dogan hat innerhalb von 10 Monaten 20 Kilo verloren. Berechne
+              nach wie viel Monaten hat er 13 Kilo verloren.
+              <input id="resultq2" />
+              <input
+                type="submit"
+                class="check-result"
+                id="check2"
+                value="Überprüfen"
+              />
+              <span class="result-icon"> &#x2714; </span>
+            </p>
+          </section>
+          <section class="exercise">
+            <h3>Aufgabe nr. 3</h3>
+            <p class="p-exercise">
+              3 Schuhmacher brauchen 5 Stunden um 15 Schuhe zu produzieren.
+              Berechne wie lange würde es dauern für 4 Schuhmacher.
+              <input id="resultq3" />
+              <input
+                type="submit"
+                class="check-result"
+                id="check3"
+                value="Überprüfen"
+              />
+              <span class="result-icon"> &#x2714; </span>
+            </p>
+          </section>
+          <section class="exercise">
+            <h3>Aufgabe nr. 4</h3>
+            <p class="p-exercise">
+              20 Kühe haben innerhalb von drei Tage 200 Liter Milchproduziert.
+              Berechne wie lange würde es brauchen um 200 Liter mit 50 Kühe zu
+              produzieren.
+              <input id="resultq4" />
+              <input
+                type="submit"
+                class="check-result"
+                id="check4"
+                value="Überprüfen"
+              />
+              <span class="result-icon"> &#x2714; </span>
+            </p>
+          </section>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; Bartosz Durczak & Nour Gaser</p>
+      <a class="footer-link" href="impressum.html">Impressum</a>
+      <a class="footer-link" href="datenschutz.html">Datenschutz</a>
+    </footer>
+    <script src="assets/javascript/check-dreisatz.js"></script>
+    <script src="assets/javascript/menu.js"></script>
+    <script src="assets/javascript/scrollTop.js"></script>
+  </body>
+</html>

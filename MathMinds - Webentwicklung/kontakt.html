@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Telefonnummer,Nachhilfe Kontakt, Kontakt aufbauen, Simply Math, E-Mail">
+        <meta name="author" content="Nour Gaser">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Baut mit uns Kontakt auf, rufe uns an unter 06241 5090 oder lass uns eine Nachricht in unserem Kontaktformular da.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        <!--icons -->
+        <link rel="icon" href="img/favicon/favicon-32x32.ico">
+        <!--32x32-->
+        <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon-180x180.png">
+        <!--180x180-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Simply Math - Kontaktseite kontaktieren sie uns jetzt</title>
+    </head>
+    <body id="grid_body_kontakt">
+        <header>
+            <!--Navigation inspieriert vom YouTube Kanal Web Dev Tutorials https://www.youtube.com/watch?v=flItyHiDm7E-->
+            <nav class="navbar" id="navbar">
+                <a href="index.html">
+                    <img class="logo" src="img/simplymath.png" alt="Simply Math logo">
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Startseite</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Jetzt lernen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nachhilfe-finden.html" class="nav-link">Finde Nachhilfe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kontakt.html" class="nav-link aktiv">Kontakt</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <div class="scrollTopBtn" id="scrollTopBtn">
+            <span class="material-symbols-outlined"> keyboard_double_arrow_up</span>
+        </div>
+
+        <!-- Welcome site + kontakt daten -->
+        <section id="willkommenbox" class="kb">
+            <!-- willkommen box -->
+
+            <h1>Kontaktiere uns</h1>
+            <p>
+                Haben Sie Fragen oder Anmerkungen? Schreiben Sie uns einfach eine Nachricht
+            </p>
+
+            <!-- Ende willkommen box -->
+        </section>
+
+        <!-- Kontakt box -->
+        <section id="kontackt-send" class="links">
+          <h2>Kontakt senden</h2>
+            <form action="assets/php/mail.php" method="post">
+                <img src="img/simplymath.png" alt="Logo">
+                <input type="text" name="Name" placeholder="Gebe deine Name ein" required>
+                <input type="text" name="Email" placeholder="Gebe dein Email ein" required>
+                <textarea cols="30" rows="5" name="Messages" placeholder="Schreib hier eine Nachricht an uns" required></textarea>
+                <button>Senden</button>
+            </form>
+        </section>
+        <!-- ende Kontakt box -->
+        <section id="datenato" class="recht">
+            <!-- info box -->
+            <div class="abox">
+                <h1>
+                    <span class="material-symbols-outlined">call</span>
+                    Rufen sie uns an
+                </h1>
+                <p>
+                    06241 5090
+                </p>
+            </div>
+            <div class="abox">
+                <h1>
+                    <span class="material-symbols-outlined">location_chip</span>
+                    Ort
+                </h1>
+                <p>
+                    <a href=""> Erenburgerstraße 19/1. OG, 67549 Worms</a>
+                </p>
+            </div>
+            <div class="abox">
+                <h1>
+                    <span class="material-symbols-outlined">acute</span>
+                    öffnungszeiten
+                </h1>
+                <p>Mo - FR 08:00 - 16:00</p>
+            </div>
+            <!-- ende info box -->
+        </section>
+
+        <footer>
+            <p>&copy; Bartosz Durczak & Nour Gaser</p>
+            <a class="footer-link" href="impressum.html">Impressum</a>
+            <a class="footer-link" href="datenschutz.html">Datenschutz</a>
+        </footer>
+        <script src="assets/javascript/menu.js"></script>
+        <script src="assets/javascript/scrollTop.js"></script>
+    </body>
+</html>

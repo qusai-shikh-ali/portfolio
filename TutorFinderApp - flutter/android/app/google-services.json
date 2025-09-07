@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "898422614135",
+    "project_id": "firsbase-auth-app",
+    "storage_bucket": "firsbase-auth-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898422614135:android:aa84c48c55092435243e72",
+        "android_client_info": {
+          "package_name": "com.example.tutor_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9rhm68yT0uANuLiyaJzlOEB-FabyOsGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898422614135:android:19aee93da4653b6a243e72",
+        "android_client_info": {
+          "package_name": "com.google.firebase.persents.firebaseconnations"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9rhm68yT0uANuLiyaJzlOEB-FabyOsGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

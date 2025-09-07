@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qusai Shikh Ali — Bewerbungs‑Website</title>
+  <meta name="description" content="Kurzprofil, Projekte, Erfahrung und Kontakt von Qusai Shikh Ali." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Qusai Shikh Ali — Bewerbungs‑Website" />
+  <meta property="og:description" content="Kurzprofil, Projekte, Erfahrung und Kontakt." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:image" content="/portrait.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👋</text></svg>">
+
+  <!-- Fonts (system stack for speed) -->
+  <style>
+    :root{
+      --bg: #0b1020; /* dark gradient start */
+      --bg-2:#0f172a; /* dark gradient end */
+      --text: #e5e7eb;
+      --muted:#94a3b8;
+      --brand:#0ea5e9; /* sky-500 */
+      --card:#111827aa;
+      --chip:#0b4a6b;
+      --ok:#10b981;
+      --warn:#f59e0b;
+      --ring: #38bdf8;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f8fafc; --bg-2:#eef2ff; --text:#0f172a; --muted:#475569; --card:#ffffffdd; --chip:#e0f2fe; }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background: radial-gradient(1200px 600px at 10% -10%, rgba(14,165,233,.25), transparent 60%), linear-gradient(160deg, var(--bg), var(--bg-2));}
+    a{color:inherit}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:linear-gradient(to bottom, rgba(0,0,0,.35), transparent); z-index:50}
+    nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .brand .dot{width:10px; height:10px; border-radius:999px; background:var(--brand); box-shadow:0 0 24px var(--brand)}
+    .menu{display:flex; gap:18px}
+    .menu a{padding:8px 12px; border-radius:12px; text-decoration:none; color:var(--muted)}
+    .menu a:hover, .menu a:focus{outline:none; color:var(--text); background:rgba(56,189,248,.12)}
+    .mobile{display:none}
+
+    .hero{padding:72px 0 28px}
+    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center}
+    .tag{display:inline-flex; gap:8px; align-items:center; background:var(--chip); color:#e0f2fe; padding:6px 10px; border-radius:999px; font-size:12px; letter-spacing:.02em}
+    .tag svg{width:14px; height:14px}
+    h1{font-size:44px; line-height:1.1; margin:.4em 0}
+    .lead{font-size:18px; color:var(--muted); max-width:52ch}
+    .actions{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; border:1px solid rgba(56,189,248,.4); background:rgba(56,189,248,.15); padding:10px 14px; border-radius:14px; color:white; text-decoration:none}
+    .btn:hover{background:rgba(56,189,248,.25)}
+    .btn.secondary{background:transparent; border-color:rgba(148,163,184,.35); color:var(--text)}
+
+    .card{background:var(--card); border:1px solid rgba(148,163,184,.18); border-radius:18px; padding:18px}
+
+    .badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .badge{padding:6px 10px; border-radius:999px; background:rgba(148,163,184,.12); border:1px solid rgba(148,163,184,.2); font-size:12px}
+
+    section{padding:42px 0}
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+
+    .proj{display:flex; flex-direction:column; gap:12px}
+    .proj h3{margin:0}
+    .proj a{display:inline-flex; gap:8px; align-items:center}
+    .thumb{aspect-ratio:16/9; width:100%; border-radius:14px; background:linear-gradient(145deg, rgba(148,163,184,.12), rgba(148,163,184,.04)); border:1px dashed rgba(148,163,184,.35); display:grid; place-items:center; color:var(--muted)}
+
+    .timeline{position:relative}
+    .timeline::before{content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:rgba(148,163,184,.2)}
+    .step{position:relative; padding-left:42px; margin-bottom:22px}
+    .step::before{content:""; position:absolute; left:4px; top:6px; width:14px; height:14px; border-radius:999px; background:var(--brand); box-shadow:0 0 0 4px rgba(14,165,233,.2)}
+
+    .contact-card{display:grid; grid-template-columns:1.2fr .8fr; gap:18px; align-items:center}
+    form{display:grid; gap:10px}
+    input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.35); background:transparent; color:var(--text)}
+    input:focus, textarea:focus{outline:2px solid var(--ring); outline-offset:2px}
+    textarea{min-height:120px; resize:vertical}
+
+    footer{padding:36px 0; color:var(--muted)}
+
+    /* Dropdown Styles */
+    .dropdown-btn{width:100%; display:flex; justify-content:space-between; align-items:center; background:transparent; border:none; color:var(--text); cursor:pointer; padding:0; font-size:inherit; font-family:inherit}
+    .dropdown-btn:hover{color:var(--brand)}
+    .dropdown-arrow{transition:transform 0.3s ease; font-size:12px}
+    .dropdown-arrow.active{transform:rotate(180deg)}
+    .dropdown-content{padding-top:16px; border-top:1px solid rgba(148,163,184,.2); margin-top:16px}
+    .dropdown-content h4{margin:16px 0 8px; color:var(--brand)}
+    .dropdown-content h4:first-child{margin-top:0}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .contact-card{grid-template-columns:1fr}
+      .menu{display:none}
+      .mobile{display:inline-flex; align-items:center; gap:8px}
+    }
+  </style>
+
+  <!-- Simple structured data (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Qusai Shikh Ali",
+    "image": "/portrait.jpg",
+    "jobTitle": "Student der angewandten Informatik",
+    "url": "https://deine-domain.de",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Hauptnavigation">
+        <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span> <span>Qusai Shikh Ali</span></a>
+        <div class="menu" role="menubar">
+          <a role="menuitem" href="#profil">Profil</a>
+          <a role="menuitem" href="#projekte">Projekte</a>
+          <a role="menuitem" href="#erfahrung">Erfahrung</a>
+          <a role="menuitem" href="#kontakt">Kontakt</a>
+        </div>
+      </nav>
+      <div id="mobileMenu" hidden style="padding-bottom:10px">
+        <div class="card" role="menu">
+          <a role="menuitem" href="#profil">Profil</a>
+          <a role="menuitem" href="#projekte">Projekte</a>
+          <a role="menuitem" href="#erfahrung">Erfahrung</a>
+          <a role="menuitem" href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div>
+          <span class="tag" title="Verfügbarkeit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10Zm1-10V7h-2v7h6v-2h-4Z"/></svg> ab sofort verfügbar</span>
+          <h1 id="hero-title">Ich entwickle <em>moderne Lösungen</em> mit <em>aktuellen Technologien</em>.</h1>
+          <p class="lead">Ich interessiere mich für die Entwicklung moderner Technologien, sowohl im Bereich Hardware als auch Software.
+            Durch mein Studium der angewandten Informatik konnte ich fundiertes theoretisches Wissen erwerben und in praktischen Projekten anwenden, um innovative und praxisnahe Lösungen umzusetzen.</p>
+          <div class="actions">
+            <a class="btn" href="#kontakt">Kontakt aufnehmen</a>
+          </div>
+          <div class="badges" aria-label="Kernkompetenzen">
+            <span class="badge">HTML/CSS</span>
+            <span class="badge">Python</span>
+            <span class="badge">Flutter</span>
+            <span class="badge">PyQt5</span>
+            <span class="badge">3D-Modellierung</span>
+            <span class="badge">Videoediting</span>
+          </div>
+        </div>
+        <div class="card" style="text-align:center">
+          <img src="Qusai.png" alt="Portrait von Qusai Shikh Ali" style="width:100%; border-radius:14px" />
+          <p style="margin:.8em 0 0; color:var(--muted)">"Technologie ist die Zukunft - ich gestalte sie mit."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profil -->
+    <section id="profil" aria-labelledby="profil-title">
+      <h2 id="profil-title">Profil</h2>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Über mich</h3>
+          <p>Als Student der angewandten Informatik an der Hochschule Worms entwickle ich moderne Softwarelösungen und Webanwendungen. Meine Leidenschaft für Technologie zeigt sich in meinen Projekten und meiner kontinuierlichen Weiterbildung.</p>
+          <p>Ich bin motiviert, innovative Lösungen zu entwickeln und dabei sowohl theoretische als auch praktische Aspekte der Informatik zu verbinden. Meine Erfahrung in der Lagerlogistik und meine IT-Kenntnisse ermöglichen es mir, ganzheitliche Lösungen zu konzipieren.</p>
+          <ul>
+            <li><strong>Zertifizierungen</strong> – HTML/CSS, Python, Projektmanagement</li>
+            <li><strong>Sprachkenntnisse</strong> – Deutsch , Englisch (B2), Arabisch (Muttersprache)</li>
+          </ul>
+        </article>
+        <aside class="card">
+          <h3>Schnellinfo</h3>
+          <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px">
+            <li><strong>Standort:</strong> Worms, Deutschland</li>
+            <li><strong>Rollen:</strong> Student der angewandten Informatik</li>
+            <li><strong>Sprachen:</strong> DE, EN (B2), AR (Muttersprache)</li>
+            <li><strong>Kontakt:</strong> <a href="mailto:qusai.shikh.ali@gmail.com">qusai.shikh.ali@gmail.com</a></li>
+            <li><strong>Telefon:</strong> <a href="tel:+491782619991">0178-2619991</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projekte" aria-labelledby="projekte-title">
+      <h2 id="projekte-title">Meine Projekte</h2>
+      <div class="grid-3">
+        <article class="proj card">
+          <div class="thumb">
+            <img src="MathMinds - Webentwicklung/IMG/Logo.JPG" alt="MathMinds Logo" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+          </div>
+          <h3>MathMinds - Nachhilfe-Website</h3>
+          <p>Vollständige Website für Mathematik-Nachhilfe mit Artikeln, Kontaktformular und responsivem Design. HTML, CSS, JavaScript.</p>
+          <div class="badges">
+            <span class="badge">HTML/CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Responsive</span>
+          </div>
+        </article>
+        <article class="proj card">
+          <div class="thumb">
+            <img src="Bright.bite - PyQt5-GUI/start.png" alt="Bright.bite Start Bild" style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+          </div>
+          <h3>Bright.bite - Zahnarzt-App</h3>
+          <p>Desktop-Anwendung für Zahnarztpraxen mit PyQt5. Benutzerfreundliche GUI für Patientenverwaltung und Terminplanung.</p>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">PyQt5</span>
+            <span class="badge">GUI</span>
+          </div>
+        </article>
+        <article class="proj card">
+          <div class="thumb">
+            <video controls style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              <source src="TutorFinderApp - flutter/video+DOC+AppAPK/video fertig DE.mp4" type="video/mp4">
+              Ihr Browser unterstützt keine Videos.
+            </video>
+          </div>
+          <h3>TutorFinderApp</h3>
+          <p>Mobile App zur Vermittlung von Nachhilfelehrern. Cross-platform Entwicklung mit Flutter und Firebase-Integration.</p>
+          <div class="badges">
+            <span class="badge">Flutter</span>
+            <span class="badge">Dart</span>
+            <span class="badge">Firebase</span>
+          </div>
+        </article>
+        <article class="proj card">
+          <div class="thumb">
+            <video controls style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              <source src="BMW - 3d Modellierung.mp4" type="video/mp4">
+              Ihr Browser unterstützt keine Videos.
+            </video>
+          </div>
+          <h3>BMW 3D-Modell</h3>
+          <p>Detaillierte 3D-Modellierung eines BMW-Fahrzeugs. Professionelle 3D-Visualisierung und Animation.</p>
+          <div class="badges">
+            <span class="badge">3D-Modellierung</span>
+            <span class="badge">Animation</span>
+            <span class="badge">Visualisierung</span>
+          </div>
+        </article>
+        <article class="proj card">
+          <div class="thumb">
+            <video controls style="width:100%; height:100%; object-fit:cover; border-radius:14px;">
+              <source src="Marks of Me - Audiovisuelle Produktion.mp4" type="video/mp4">
+              Ihr Browser unterstützt keine Videos.
+            </video>
+          </div>
+          <h3>Marks of Me</h3>
+          <p>Audiovisuelle Produktion mit professioneller Videobearbeitung, Sounddesign und kreativer Gestaltung.</p>
+          <div class="badges">
+            <span class="badge">Videoediting</span>
+            <span class="badge">Sounddesign</span>
+            <span class="badge">Kreativ</span>
+          </div>
+        </article>
+        <article class="proj card">
+          <div class="thumb">
+            <img src="TutorFinderApp - flutter/images/logo.png" alt="Zertifikate Logo" style="width:70%; max-width:200px; height:auto; object-fit:contain; border-radius:14px; margin:0 auto; display:block;">
+          </div>
+          <h3>Zertifizierungen</h3>
+          <p>Erfolgreich abgeschlossene Zertifizierungen in HTML/CSS, Python und Projektmanagement mit praktischen Projekten.</p>
+          <div class="badges">
+            <span class="badge">HTML/CSS</span>
+            <span class="badge">Python</span>
+            <span class="badge">Projektmanagement</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Erfahrung / Timeline -->
+    <section id="erfahrung" aria-labelledby="erfahrung-title">
+      <h2 id="erfahrung-title">Erfahrung</h2>
+      <div class="timeline">
+        <article class="step card">
+          <h3>Student der angewandten Informatik @ Hochschule Worms <span class="badge">01/2023–02/2026</span></h3>
+          <p>Bachelorstudium mit Fokus auf Softwareentwicklung und moderne Technologien.</p>
+          <ul>
+            <li>Vertiefung in Webentwicklung und Programmierung</li>
+            <li>Praktische Projekte in verschiedenen Technologien</li>
+          </ul>
+        </article>
+        <article class="step card">
+          <h3>Praktikum Lagerlogistik @ Autohaus Talay <span class="badge">02/2020–01/2021</span></h3>
+          <ul>
+            <li>Praktische Erfahrung in der Lagerlogistik</li>
+            <li>Arbeit mit SAP4school (fortgeschritten)</li>
+          </ul>
+        </article>
+        <article class="step card">
+          <h3>Aushilfstätigkeit @ Ahl-Aalkair-Verein <span class="badge">08/2018–10/2019</span></h3>
+          <p>Unterstützung bei verschiedenen Aufgaben und Projekten.</p>
+        </article>
+        <article class="step card">
+          <h3>Höhere Berufsfachschule @ BBS Wirtschaft I <span class="badge">08/2019–03/2022</span></h3>
+          <p>Schwerpunkt: Industrie und Logistik. Abschluss: Schulischer Teil der Fachhochschulreife.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" aria-labelledby="kontakt-title">
+      <h2 id="kontakt-title">Kontakt</h2>
+      <div class="contact-card card">
+        <div>
+          <h3>Direkte Kontaktdaten</h3>
+          <p><strong>E-Mail:</strong> <a id="emailLink" href="mailto:qusai.shikh.ali@gmail.com">qusai.shikh.ali@gmail.com</a></p>
+          <p><strong>Telefon:</strong> <a href="tel:+491782619991">0178-2619991</a></p>
+          <p><strong>Adresse:</strong> Bebelstraße 22, 67549 Worms</p>
+          <button class="btn secondary" onclick="copyEmail()">E‑Mail kopieren</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap">
+        <small>© <span id="year"></span> Qusai Shikh Ali</small>
+        <small><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Impressum & Datenschutz Dropdown -->
+  <section class="container" style="padding-bottom:60px">
+    <div class="grid-2">
+      <div class="card">
+        <button class="dropdown-btn" onclick="toggleDropdown('impressum')">
+          <h3>Impressum</h3>
+          <span class="dropdown-arrow">▼</span>
+        </button>
+        <div id="impressum" class="dropdown-content" style="display:none;">
+          <h4>Angaben gemäß § 5 TMG</h4>
+          <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong></p>
+          <p>
+            Qusai Shikh Ali<br>
+            Bebelstraße 22<br>
+            67549 Worms<br>
+            Deutschland
+          </p>
+          
+          <h4>Kontakt</h4>
+          <p>
+            <strong>E-Mail:</strong> <a href="mailto:qusai.shikh.ali@gmail.com">qusai.shikh.ali@gmail.com</a><br>
+            <strong>Telefon:</strong> <a href="tel:+491782619991">0178-2619991</a>
+          </p>
+          
+          <h4>Haftungsausschluss</h4>
+          <p><strong>Haftung für Inhalte:</strong> Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+          
+          <p><strong>Haftung für Links:</strong> Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben.</p>
+          
+          <p><strong>Urheberrecht:</strong> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <button class="dropdown-btn" onclick="toggleDropdown('datenschutz')">
+          <h3>Datenschutzerklärung</h3>
+          <span class="dropdown-arrow">▼</span>
+        </button>
+        <div id="datenschutz" class="dropdown-content" style="display:none;">
+          <h4>1. Datenschutz auf einen Blick</h4>
+          <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+          
+          <h4>Datenerfassung auf dieser Website</h4>
+          <p><strong>Wer ist verantwortlich?</strong><br>
+          Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" entnehmen.</p>
+          
+          <h4>Wie erfassen wir Ihre Daten?</h4>
+          <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst.</p>
+          
+          <h4>Ihre Rechte</h4>
+          <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten. Sie können auch jederzeit der Datenverarbeitung widersprechen.</p>
+          
+          <h4>Verantwortliche Stelle</h4>
+          <p>
+            Qusai Shikh Ali<br>
+            Bebelstraße 22, 67549 Worms<br>
+            E-Mail: qusai.shikh.ali@gmail.com<br>
+            Telefon: 0178-2619991
+          </p>
+          
+          <p><em>Stand: Dezember 2024</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Jahr im Footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menü
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const open = mobileMenu.hasAttribute('hidden') ? false : true;
+      if(open){ mobileMenu.setAttribute('hidden',''); menuBtn.setAttribute('aria-expanded','false'); }
+      else { mobileMenu.removeAttribute('hidden'); menuBtn.setAttribute('aria-expanded','true'); }
+    });
+
+    // E-Mail kopieren
+    function copyEmail(){
+      const email = document.getElementById('emailLink').textContent;
+      navigator.clipboard.writeText(email).then(()=>{
+        alert('E‑Mail-Adresse kopiert: ' + email);
+      });
+    }
+
+    // Dropdown Toggle
+    function toggleDropdown(id){
+      const content = document.getElementById(id);
+      const arrow = content.previousElementSibling.querySelector('.dropdown-arrow');
+      
+      if(content.style.display === 'none'){
+        content.style.display = 'block';
+        arrow.classList.add('active');
+      } else {
+        content.style.display = 'none';
+        arrow.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
