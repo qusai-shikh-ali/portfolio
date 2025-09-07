@@ -1,4 +1,7 @@
 import json
+import os
+import sys
+from pathlib import Path
 
 # Stil-Definition
 STYLE = """
@@ -81,9 +84,20 @@ def speichere_daten(pfad, daten):
         json.dump(daten, f, ensure_ascii=False, indent=2)
 
 # Datenpfade
-pfad_patienten = "data/patienten.json"
-pfad_zahnaerzte = "data/zahnaerzte.json"
-pfad_behandlungen = "data/kosten_behandlungen.json"
+# Robust für Dev (Python) und für gefrorene EXE (PyInstaller)
+def _base_dir() -> Path:
+    # Wenn als EXE gepackt, liegen Assets in sys._MEIPASS
+    if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+        return Path(sys._MEIPASS)  # type: ignore[attr-defined]
+    # Im Dev: Projektwurzel = Ordner über 'gui/'
+    return Path(__file__).resolve().parent.parent
+
+BASE_DIR = _base_dir()
+DATA_DIR = BASE_DIR / "data"
+
+pfad_patienten = str(DATA_DIR / "patienten.json")
+pfad_zahnaerzte = str(DATA_DIR / "zahnaerzte.json")
+pfad_behandlungen = str(DATA_DIR / "kosten_behandlungen.json")
 
 # Daten laden
 patienten = lade_daten(pfad_patienten)
